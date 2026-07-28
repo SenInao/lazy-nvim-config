@@ -1,8 +1,9 @@
 return {
-  "xiyaowong/transparent.nvim",
-  lazy = true,
-  config = function ()
-    local transparent = require("transparent")
-    transparent.clear_prefix("Lualine")
+  'xiyaowong/transparent.nvim',
+  lazy=false,
+  config = function()
+    require("transparent").setup({
+      extra_groups = { "NormalFloat", "Pmenu" }, -- Optional: make floats transparent too
+    })
   end
 }
